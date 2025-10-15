@@ -18,8 +18,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-// The backend URL. You should move this to an environment variable for production.
-const API_URL = 'http://localhost:3000/api/notes';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/notes`;
 
 const notes = ref([]);
 const loading = ref(true);
